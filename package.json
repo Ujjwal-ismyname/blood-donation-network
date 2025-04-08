@@ -1,0 +1,25 @@
+{
+    "name": "blood-donation-network",
+    "version": "1.0.0",
+    "description": "Blood Donation Network connecting donors, recipients, and blood banks",
+    "main": "index.js",
+    "scripts": {
+      "start": "node server/index.js",
+      "server": "nodemon server/index.js",
+      "client": "cd client && npm start",
+      "dev": "concurrently \"npm run server\" \"npm run client\"",
+      "build": "cd client && npm run build",
+      "setup-db": "mysql -u root -p < server/db.sql"
+    },
+    "keywords": [
+      "blood",
+      "donation",
+      "healthcare"
+    ],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+      "concurrently": "^7.6.0"
+    }
+  }
+  
