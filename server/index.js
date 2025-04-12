@@ -4,8 +4,9 @@ const dotenv = require('dotenv');
 const db = require('./db');
 const authRoutes = require('./routes/auth');
 const donorRoutes = require('./routes/donors');
+const recipientRoutes = require('./routes/recipients');
+const bloodBankRoutes = require('./routes/bloodBanks');
 // Add the missing routes imports here
-
 dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -29,6 +30,8 @@ testConnection();
 // Routes
 app.use('/api/auth', authRoutes);
 app.use('/api/donors', donorRoutes);
+app.use('/api/recipients', recipientRoutes);
+app.use('/api/blood-banks', bloodBankRoutes);
 // Add other routes here
 
 app.listen(PORT, () => {

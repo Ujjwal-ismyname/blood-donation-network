@@ -3,6 +3,9 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { AuthProvider } from './context/AuthContext';
 import PrivateRoute from './components/PrivateRoute';
 
+// import { BrowserRouter, Routes, Route } from 'react-router-dom'; // Ensure this is correct
+
+
 // Pages
 import Home from './pages/Home';
 import Login from './pages/Login';
